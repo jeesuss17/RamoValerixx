@@ -1,0 +1,22 @@
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:#16051f}
+body{font-family:Georgia,'Times New Roman',serif;color:#fff;overflow-x:hidden}
+.screen{min-height:100vh;min-height:100svh}
+.opening{position:relative;min-height:100vh;min-height:100svh;display:grid;place-items:center;overflow:hidden;
+background:radial-gradient(ellipse at 50% 48%,#51106f 0%,#2b0b3e 42%,#100416 100%)}
+.opening:before,.opening:after{content:"♡  ·   ✦    ♡       ✧      ♡   ·       ✦";position:absolute;inset:9% -10% auto;
+font-size:clamp(25px,5vw,54px);letter-spacing:clamp(12px,4vw,48px);color:#e9a0ff;opacity:.55;text-shadow:0 0 16px #d82cff;white-space:nowrap;animation:drift 18s linear infinite}
+.opening:after{inset:auto -20% 12%;transform:rotate(180deg);opacity:.35;animation-duration:25s}
+.glow{position:absolute;width:min(65vw,520px);aspect-ratio:1;border-radius:50%;background:#a600ff;filter:blur(110px);opacity:.28}
+.reveal-button{position:relative;z-index:1;padding:19px 54px;border:2px solid #ffd2ff;border-radius:999px;
+background:linear-gradient(135deg,#8f16b9,#4c0879);color:#fff;font-size:clamp(25px,5vw,42px);
+font-family:'Brush Script MT','Segoe Script',cursive;cursor:pointer;box-shadow:0 0 14px #f5a0ff,0 0 38px #bf27ff, inset 0 0 16px #e78cff55;
+transition:transform .25s,box-shadow .25s}
+.reveal-button span{color:#ffc8ff;margin-left:10px}
+.reveal-button:hover{transform:scale(1.07);box-shadow:0 0 24px #ffd0ff,0 0 65px #bf27ff}
+.reveal{min-height:100vh;min-height:100svh;display:flex;align-items:center;justify-content:center;padding:0;background:#18051f;animation:show .9s ease both}
+.reveal img{display:block;width:100%;height:auto;max-height:100vh;object-fit:contain}
+.hidden{display:none!important}
+@keyframes show{from{opacity:0;transform:scale(.97)}to{opacity:1;transform:scale(1)}}
+@keyframes drift{from{transform:translateX(0)}to{transform:translateX(-12%)}}
+@media(max-width:600px){.reveal{padding:0}.reveal img{width:100%;height:auto;object-fit:contain}.reveal-button{padding:17px 42px}}
